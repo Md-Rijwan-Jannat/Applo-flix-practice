@@ -19,7 +19,6 @@ const createMovieIntoDB = async (payload: TMovieValidation) => {
   // await result.save();
 
   // create a static methods
-
   const slug = Movie.createSlug(payload.title, payload.releaseDate);
   const result = new Movie({ ...payload, slug });
   return result;
